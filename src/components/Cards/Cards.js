@@ -21,7 +21,7 @@ const Cards = ({ results }) => {
         )
        } ); //x is going to target results one by one
     }else{
-        display = "No Characters Found :/";
+        display = "No characters Here :/";
     }
   return (
     <>{display}</  >
