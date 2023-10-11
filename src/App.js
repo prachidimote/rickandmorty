@@ -1,14 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import { useState,useEffect } from "react";
+import Pagination from './components/Pagination/Pagination';
 function App() {
-  let [pageNumber, setPageNumber] = useState(1);
+  let [pageNumber, setPageNumber] = useState(1); //setPageNumber function is used to change the pageNumber variable
   let [fetchedData, updateFetchedData] = useState([]);
   //Destructuring fetchedData into info and results   
-  let { info, results } = fetchedData;
+  let { results } = fetchedData;
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
   useEffect(() => {
@@ -37,6 +37,8 @@ function App() {
 </div>
   </div>
 </div>
+
+<Pagination pageNumber={pageNumber} setPageNumber={ setPageNumber }/>
     </div>
   )
 }
