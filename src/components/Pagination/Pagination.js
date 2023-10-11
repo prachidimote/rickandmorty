@@ -7,7 +7,8 @@ const Pagination = ({ pageNumber, setPageNumber }) => {
     };
 
     let prev = () => {
-        //To prevent pages goes n minus i.e -1,-2        if(pageNumber === 1) return
+        //To prevent pages goes n minus i.e -1,-2        
+        if(pageNumber === 1) return
         setPageNumber((x) => x-1)
     };
   return (
