@@ -15,8 +15,6 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
    onPageChange={(data) => {
     setPageNumber(data.selected + 1);
    }}
-  //  nextClassName='btn btn-primary'
-  // previousClassName='btn btn-primary'
    pageCount={info?.pages}/> 
    </div>
    )
