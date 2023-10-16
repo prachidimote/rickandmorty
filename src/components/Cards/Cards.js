@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./Cards.module.scss";
+import nothing from './nothing.png';
 
 const Cards = ({ results }) => {
     let display;
@@ -40,7 +41,12 @@ const Cards = ({ results }) => {
         )
        } ); //x is going to target results one by one
     }else{
-       display = "No Characterd Here: /"
+  
+      display = (
+        <div className='col-12 text-center'  style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '80px' }}>
+          <img src={nothing} alt="No characters found" />
+        </div>
+      );
     }
   return (
     <>{display}</  >
